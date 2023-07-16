@@ -27,7 +27,7 @@ function pwReg(text){
 
 const email = document.querySelector('.user-email-input');
 const pw = document.querySelector('.user-password-input');
-const button = document.querySelector('btn-login');
+const button = document.querySelector('.btn-login');
 
 let emailPass = false;
 
