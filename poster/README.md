@@ -35,7 +35,8 @@
 
 ## :camera: 결과 스크린샷
 ![image](https://github.com/shju0317/js-homework/assets/31871923/e7b86b21-5f15-4716-a183-be61b44d7afd)
-![image](https://github.com/shju0317/js-homework/assets/31871923/a8f1ba0b-f496-4c31-a85b-0cc3641d4997)
+![image](https://github.com/shju0317/js-homework/assets/31871923/0751915f-7071-4587-bbf1-2939127f5bd8)
+
 
 ## :speech_balloon: 코드리뷰
 - setBgColor() : 배경 색상 변경
