@@ -68,3 +68,12 @@
     nickName.textContent = `${name}`;
   }
   ```
+- highlightItem() : click한 li에 is-active 클래스 추가
+  ```js
+    function highlightItem(target){
+    li.forEach((item)=>{
+      removeClass(item, 'is-active');
+    })
+    addClass(target, 'is-active');
+  }
+  ```
