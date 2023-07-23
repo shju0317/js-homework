@@ -71,10 +71,25 @@
   ```
 - highlightItem() : click한 li에 is-active 클래스 추가
   ```js
-    function highlightItem(target){
+  function highlightItem(target){
     li.forEach((item)=>{
       removeClass(item, 'is-active');
     })
     addClass(target, 'is-active');
   }
+  ```
+  ```css
+  .nav ul li.is-active{
+    border: 4px solid white;
+  }
+  ```
+  ```html
+  <nav class="nav">
+    <ul>
+      <li class="is-active" data-index="1">
+        <button><img src="./assets/ember.jpeg" alt="엠버 포스터" /></button>
+      </li>
+      ...
+    </ul>
+  </nav>
   ```
