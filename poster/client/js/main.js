@@ -1,4 +1,4 @@
-import { attr, getNode } from '../lib/index.js'
+import { attr, css, getNode } from '../lib/index.js'
 
 /* 
 
@@ -13,19 +13,21 @@ import { attr, getNode } from '../lib/index.js'
 const nav = getNode('.nav')
 const visual = getNode('.visual')
 const nickName = getNode('.nickName')
-
+const body = getNode('body');
 let index = 0;
 
-console.log("nav: ", nav);
-console.log("visual: ", visual);
-
 // 2. nav 클릭시 배경 색상 변경
-function changeBgColor(){
+function setBgColor(index){
+    const {color} = data[index];
+    const [colorA, colorB] = color;
   
+    if(!(colorB)) colorB = '#000';
+
+    css(body, 'background', `linear-gradient(to bottom, ${colorA}, ${colorB})`);
 }
 
 // 3. 이미지 변경
-function changeVisual(target, index){
+function setImage(target, index){
 
   
   let selectedImg = visual.querySelector('img');
@@ -35,20 +37,20 @@ function changeVisual(target, index){
 }
 
 // 4. 텍스트 변경
-function changeNickName(index) {
+function setNameText(index) {
 	const {name} = data[index];
 
 	nickName.textContent = `${name}`;
 }
 
+// li목록 click시 텍스트(nickName), 배경, 이미지 변경
 function changePoster(e){
   let target = e.target.closest('li'); 
   index = attr(target, 'data-index') - 1;
 
-  changeVisual(target,index);
-  changeNickName(index);
-
-
+  setBgColor(index);
+  setImage(target, index);
+  setNameText(index);
 }
 
 nav.addEventListener('click', changePoster);
